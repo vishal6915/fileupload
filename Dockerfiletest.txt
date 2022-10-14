@@ -1,0 +1,9 @@
+
+    FROM openjdk:16-jdk-buster
+    USER root
+    ADD test
+    RUN mv /opt/test /opt/smartops-application
+    RUN chmod 777 -R /opt/smartops-application
+    EXPOSE 8080:8080
+    CMD ["/opt/smartops-application/bin/catalina.sh","run"]
+    
