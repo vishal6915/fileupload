@@ -1,8 +1,8 @@
 
     FROM openjdk:16-jdk-buster
     USER root
-    ADD qwerty
-    RUN mv /opt/qwerty /opt/smartops-application
+    ADD ydh
+    RUN mv /opt/ydh /opt/smartops-application
     RUN chmod 777 -R /opt/smartops-application
     EXPOSE 8084:8084
     CMD ["/opt/smartops-application/bin/catalina.sh","run"]
